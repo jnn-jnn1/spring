@@ -21,6 +21,7 @@ public class Controller05 {
 
     @RequestMapping("sub3")
     public void method3(@RequestParam("age") int age) {
+        System.out.println("Controller05.method3");
         if (age < 18) {
             System.out.println("청소년 관련 정보 출력");
         } else if (age < 35) {

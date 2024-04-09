@@ -33,7 +33,7 @@ public class Controller07 {
         // 요청 정보 분석/가공
         // 비지니스 로직 처리
         // 결과는 모델에 담고
-        // view로 푸위딩(view이름 리턴)
+        // view로 포위딩(view이름 리턴)
         return "view1";
     }
 
