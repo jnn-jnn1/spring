@@ -8,6 +8,7 @@
 <c:forEach begin="1" end="3" var="num">
     <p>반복 출력 할 코드${num}</p>
 </c:forEach>
+
 <%--begin은 0보다 작을 수 없음--%>
 <c:forEach begin="1" end="9" var="num">
     <p>2 x ${num} = ${2 * num}</p>

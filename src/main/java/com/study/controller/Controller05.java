@@ -46,4 +46,13 @@ public class Controller05 {
             System.out.println("큰 키입니다");
         }
     }
+
+    @RequestMapping("sub5")
+    public void method5(@RequestParam("height") double param) {
+
+    }
+
+    @RequestMapping(value = "sub6", params = "height")
+    public void method6() {
+    }
 }
