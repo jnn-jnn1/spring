@@ -1,5 +1,6 @@
 package com.study.domain;
 
+
 public class MyBean131 {
     private String address;
     private String city;

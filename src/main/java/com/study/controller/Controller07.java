@@ -62,7 +62,7 @@ public class Controller07 {
     @RequestMapping("sub7")
     public void method7() {
         // 요청 경로와 같은 view의 이름으로 결정됨
-        // view : /WEB-INF/view/main7/sub7.jsp
+        // view : /WEB-INF/view/main7/sub6.jsp
     }
 
     @RequestMapping("sub8")
