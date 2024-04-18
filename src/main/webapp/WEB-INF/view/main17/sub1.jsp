@@ -11,7 +11,7 @@
 <hr>
 <%--tesla--%>
 <%-- sub2로 접근 - 제네시스 --%>
-<div>${moddel}</div>
+<div>${model}</div>
 <%--tesla--%>
 <div>${requestScope.model}</div>
 <%--제네시스--%>
