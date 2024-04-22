@@ -29,7 +29,7 @@
     </div>
     <div>
         메모
-        <input type="text" name="notes">
+        <textarea name="notes"></textarea>
     </div>
     <div>
         <input type="submit" value="입력">
