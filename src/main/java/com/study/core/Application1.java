@@ -1,4 +1,4 @@
-package com.study.core1;
+package com.study.core;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -8,13 +8,13 @@ public class Application1 {
         System.out.println("main method");
 
         Controller1 c = new Controller1();
-        Dao dao = new Dao();
+        Dao1 dao = new Dao1();
         c.setDao(dao);
         c.action();
     }
 }
 
-class Dao {
+class Dao1 {
     public void select() {
         System.out.println("select data");
     }
@@ -22,9 +22,9 @@ class Dao {
 
 class Controller1 {
     // dependency
-    private Dao dao;
+    private Dao1 dao;
 
-    public void setDao(Dao dao) {
+    public void setDao(Dao1 dao) {
         this.dao = dao;
     }
 

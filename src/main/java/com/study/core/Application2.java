@@ -1,4 +1,4 @@
-package com.study.core2;
+package com.study.core;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.SpringApplication;
@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 public class Application2 {
     public static void main(String[] args) {
         BeanFactory beanFactory = SpringApplication.run(Application2.class);
-        Dao bean1 = beanFactory.getBean(Dao.class);
-        Controller bean2 = beanFactory.getBean(Controller.class);
+        Dao3 bean1 = beanFactory.getBean(Dao3.class);
+        Controller3 bean2 = beanFactory.getBean(Controller3.class);
 
         System.out.println(System.identityHashCode(bean1));
         System.out.println(System.identityHashCode(bean2));
