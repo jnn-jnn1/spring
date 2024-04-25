@@ -2,10 +2,7 @@ package com.study.mapper;
 
 import com.study.domain.MyBean253Customer;
 import com.study.domain.MyBean255Employee;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface Mapper03 {
@@ -51,4 +48,23 @@ public interface Mapper03 {
                 WHERE EmployeeID = #{employeeID}
             """)
     int updateEmployee(MyBean255Employee employee);
+
+    @Select("""
+                SELECT *
+                FROM Customers
+                WHERE CustomerID = #{id}
+            """)
+    MyBean253Customer selectCustomerByID(Integer id);
+
+    @Update("""
+                UPDATE Customers
+                SET CustomerName = #{customerName},
+                    ContactName = #{contactName},
+                    Address = #{address},
+                    City = #{city},
+                    PostalCode = #{postalCode},
+                    Country = #{country}
+                WHERE CustomerID = #{customerID}
+            """)
+    int updateCustomer(MyBean253Customer customer);
 }

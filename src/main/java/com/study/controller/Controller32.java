@@ -83,4 +83,28 @@ public class Controller32 {
 
         return "redirect:/main32/sub6?id=" + employee.getEmployeeID();
     }
+
+    @GetMapping("sub7")
+    public void method8(Integer id, Model model) {
+        if (id != null) {
+            MyBean253Customer c = mapper.selectCustomerByID(id);
+
+            model.addAttribute("customer", c);
+        }
+    }
+
+    @PostMapping("sub7/update")
+    public String method9(MyBean253Customer customer, RedirectAttributes rttr) {
+
+        int i = mapper.updateCustomer(customer);
+        if (i > 0) {
+            rttr.addFlashAttribute("message", i + "명 고객 수정 완료 !");
+        } else {
+            rttr.addFlashAttribute("message", "수정 실패 !");
+        }
+
+        rttr.addAttribute("id", customer.getCustomerID());
+
+        return "redirect:/main32/sub7";
+    }
 }
